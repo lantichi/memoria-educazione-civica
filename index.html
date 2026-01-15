@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ombre che Parlano – Giornata della Memoria</title>
+
+  <style>
+    /* --- PALETTE ---
+       Nero profondo: #0b0b0b
+       Rosso scuro: #7a0000
+       Rosso cremisi: #b30000
+       Grigio chiaro: #e6e6e6
+    */
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Georgia", serif;
+      background: linear-gradient(180deg, #0b0b0b 0%, #1a0000 100%);
+      color: #e6e6e6;
+      line-height: 1.7;
+      display: flex;
+    }
+
+    /* --- MENU LATERALE --- */
+    #sidebar {
+      width: 260px;
+      background: linear-gradient(180deg, #0d0d0d 0%, #200000 100%);
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 40px 25px;
+      box-shadow: 3px 0 15px rgba(0,0,0,0.6);
+      border-right: 1px solid #3a0000;
+    }
+
+    #sidebar h2 {
+      color: #b30000;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #7a0000;
+    }
+
+    #sidebar a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      transition: 0.2s;
+    }
+
+    #sidebar a:hover {
+      color: #fff;
+      text-shadow: 0 0 6px #b30000;
+    }
+
+    /* --- CONTENUTO --- */
+    #content {
+      margin-left: 260px;
+      padding: 50px;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #b30000;
+      text-shadow: 0 0 12px #7a0000;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 60px;
+      color: #e6e6e6;
+      border-bottom: 1px solid #3a0000;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: rgba(20, 0, 0, 0.6);
+      padding: 25px;
+      margin: 25px 0;
+      border-left: 4px solid #7a0000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      backdrop-filter: blur(2px);
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 20px;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+      border-top: 1px solid #3a0000;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- MENU LATERALE -->
+<div id="sidebar">
+  <h2>Ombre che Parlano</h2>
+  <a href="#intro">Introduzione</a>
+  <a href="#storia">Storia</a>
+  <a href="#letteratura">Letteratura</a>
+  <a href="#testimonianze">Testimonianze</a>
+  <a href="#civica">Educazione Civica</a>
+  <a href="#laboratori">Laboratori</a>
+</div>
+
+<!-- CONTENUTO -->
+<div id="content">
+
+  <section id="intro">
+    <h1>Ombre che Parlano</h1>
+    <p>Un percorso di memoria, consapevolezza e cittadinanza per studenti della scuola superiore.</p>
+  </section>
+
+  <section id="storia">
+    <h2>Storia</h2>
+    <div class="card">
+      <p>La Giornata della Memoria ricorda la liberazione del campo di Auschwitz e invita a riflettere sulle conseguenze dell’odio e della disumanizzazione.</p>
+      <ul>
+        <li>Le leggi razziali del 1938</li>
+        <li>La deportazione degli ebrei italiani</li>
+        <li>I campi di sterminio nazisti</li>
+        <li>La liberazione di Auschwitz</li>
+        <li>I Giusti tra le Nazioni</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="letteratura">
+    <h2>Letteratura</h2>
+    <div class="card">
+      <p>La letteratura permette di attraversare la memoria con voce umana e consapevole.</p>
+      <ul>
+        <li><em>Se questo è un uomo</em> – Primo Levi</li>
+        <li><em>La notte</em> – Elie Wiesel</li>
+        <li><em>Il diario di Anne Frank</em></li>
+        <li>Poesie di Paul Celan</li>
+      </ul>
+      <p>Attività: collegare un estratto a un articolo della Costituzione.</p>
+    </div>
+  </section>
+
+  <section id="testimonianze">
+    <h2>Testimonianze</h2>
+    <div class="card">
+      <p>Le testimonianze dirette sono fondamentali per comprendere la Shoah attraverso gli occhi di chi l’ha vissuta.</p>
+      <ul>
+        <li>Interviste e videoregistrazioni del Memoriale della Shoah</li>
+        <li>Testimonianze italiane, come quella di Liliana Segre</li>
+        <li>Archivi digitali (CDEC, USC Shoah Foundation)</li>
+      </ul>
+      <p>Attività: “La domanda che avrei voluto fare”.</p>
+    </div>
+  </section>
+
+  <section id="civica">
+    <h2>Educazione Civica</h2>
+    <div class="card">
+      <p>La memoria storica è un pilastro della cittadinanza democratica.</p>
+      <ul>
+        <li>Articoli della Costituzione (es. 3, 21, 2)</li>
+        <li>Diritti negati durante la Shoah</li>
+        <li>Meccanismi della propaganda</li>
+        <li>Discorsi d’odio e responsabilità civile</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="laboratori">
+    <h2>Laboratori ed Esercitazioni</h2>
+    <div class="card">
+      <ul>
+        <li>Analisi critica di un brano e collegamento alla Costituzione</li>
+        <li>Mappa concettuale interattiva</li>
+        <li>Visione guidata di una testimonianza</li>
+        <li>Scrittura creativa: vignette, poesie, micro‑racconti</li>
+        <li>Compito di realtà: campagna di sensibilizzazione</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Sito creato per percorsi scolastici sulla Giornata della Memoria – Educazione Civica
+  </footer>
+
+</div>
+
+</body>
+</html>
