@@ -6,9 +6,12 @@
   <title>Ombre che Parlano – Giornata della Memoria</title>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    /* --- PALETTE ---
+       Nero profondo: #0b0b0b
+       Rosso scuro: #7a0000
+       Rosso cremisi: #b30000
+       Grigio chiaro: #e6e6e6
+    */
 
     body {
       margin: 0;
@@ -79,12 +82,6 @@
       padding-bottom: 5px;
     }
 
-    section:target h2 {
-      color: #b30000;
-      text-shadow: 0 0 12px #7a0000;
-      transition: 0.4s;
-    }
-
     .card {
       background: rgba(20, 0, 0, 0.6);
       padding: 25px;
@@ -92,94 +89,10 @@
       border-left: 4px solid #7a0000;
       box-shadow: 0 2px 10px rgba(0,0,0,0.5);
       backdrop-filter: blur(2px);
-      transition: 0.4s;
     }
 
-    section:target .card {
-      border-left: 4px solid #ff0000;
-      box-shadow: 0 0 15px rgba(179,0,0,0.5);
-    }
-
-    .card a {
-      color: #b30000;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .card a:hover {
-      color: #ffffff;
-      text-shadow: 0 0 6px #b30000;
-    }
-
-    /* --- TIMELINE --- */
-    .timeline {
-      position: relative;
-      margin: 40px 0;
-      padding-left: 30px;
-      border-left: 2px solid #7a0000;
-    }
-
-    .timeline-item {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.6s ease-out;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .timeline-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .timeline-dot {
-      width: 14px;
-      height: 14px;
-      background: #b30000;
-      border-radius: 50%;
-      position: absolute;
-      left: -8px;
-      top: 5px;
-      box-shadow: 0 0 10px #b30000;
-    }
-
-    .timeline-content h3 a {
-      color: #b30000;
-      text-decoration: none;
-    }
-
-    .timeline-content h3 a:hover {
-      color: #fff;
-      text-shadow: 0 0 6px #b30000;
-    }
-
-    /* --- INDICE LATERALE DESTRO --- */
-    #scroll-index {
-      position: fixed;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 1000;
-    }
-
-    #scroll-index a {
-      color: #b30000;
-      text-decoration: none;
-      font-size: 0.9rem;
-      padding: 6px 10px;
-      background: rgba(20,0,0,0.5);
-      border-left: 3px solid #7a0000;
-      transition: 0.3s;
-    }
-
-    #scroll-index a.active {
-      color: #fff;
-      background: rgba(179,0,0,0.3);
-      border-left: 3px solid #ff0000;
-      text-shadow: 0 0 6px #b30000;
+    .card ul li {
+      margin-bottom: 8px;
     }
 
     footer {
@@ -206,15 +119,6 @@
   <a href="#laboratori">Laboratori</a>
 </div>
 
-<!-- INDICE LATERALE DESTRO -->
-<div id="scroll-index">
-  <a href="#storia">Storia</a>
-  <a href="#letteratura">Letteratura</a>
-  <a href="#testimonianze">Testimonianze</a>
-  <a href="#civica">Educazione Civica</a>
-  <a href="#laboratori">Laboratori</a>
-</div>
-
 <!-- CONTENUTO -->
 <div id="content">
 
@@ -223,238 +127,78 @@
     <p>Un percorso di memoria, consapevolezza e cittadinanza per studenti della scuola superiore.</p>
   </section>
 
-  <!-- =======================
-       SEZIONE STORIA + TIMELINE
-       ======================= -->
   <section id="storia">
     <h2>Storia</h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3><a href="#leggi1938">Le leggi razziali del 1938</a></h3>
-          <p>La legislazione che avviò la discriminazione sistematica degli ebrei italiani.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3><a href="#deportazione">La deportazione degli ebrei italiani</a></h3>
-          <p>Arresti, rastrellamenti e deportazioni dopo l’8 settembre 1943.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3><a href="#campi">I campi di sterminio nazisti</a></h3>
-          <p>Luoghi progettati per l’eliminazione sistematica.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3><a href="#auschwitz">La liberazione di Auschwitz</a></h3>
-          <p>27 gennaio 1945: il mondo scopre l’orrore.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3><a href="#giusti">I Giusti tra le Nazioni</a></h3>
-          <p>Chi scelse di salvare, rischiando tutto.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =======================
-       DESCRIZIONI STORIA
-       ======================= -->
-
-  <section id="leggi1938">
-    <h2>Le leggi razziali del 1938</h2>
     <div class="card">
-      <p>Nel 1938 il regime fascista introdusse norme discriminatorie contro gli ebrei italiani. 
-      Furono esclusi da scuole, università, lavoro pubblico, proprietà e vita civile. 
-      Queste leggi prepararono il terreno alla persecuzione e alla deportazione.</p>
+      <p>La Giornata della Memoria ricorda la liberazione del campo di Auschwitz e invita a riflettere sulle conseguenze dell’odio e della disumanizzazione.</p>
+      <ul>
+        <li>Le leggi razziali del 1938</li>
+        <li>La deportazione degli ebrei italiani</li>
+        <li>I campi di sterminio nazisti</li>
+        <li>La liberazione di Auschwitz</li>
+        <li>I Giusti tra le Nazioni</li>
+      </ul>
     </div>
   </section>
-
-  <section id="deportazione">
-    <h2>La deportazione degli ebrei italiani</h2>
-    <div class="card">
-      <p>Dopo l’8 settembre 1943, con l’occupazione nazista, migliaia di ebrei italiani furono arrestati e deportati. 
-      Solo una piccola parte fece ritorno. La deportazione colpì famiglie, comunità e intere città.</p>
-    </div>
-  </section>
-
-  <section id="campi">
-    <h2>I campi di sterminio nazisti</h2>
-    <div class="card">
-      <p>I campi di sterminio furono luoghi progettati per l’eliminazione sistematica di milioni di persone. 
-      Auschwitz-Birkenau, Treblinka, Sobibor e altri campi rappresentano il punto più estremo della disumanizzazione.</p>
-    </div>
-  </section>
-
-  <section id="auschwitz">
-    <h2>La liberazione di Auschwitz</h2>
-    <div class="card">
-      <p>Il 27 gennaio 1945 l’Armata Rossa liberò Auschwitz. Le testimonianze dei sopravvissuti rivelarono al mondo 
-      l’orrore della Shoah. Questa data è oggi simbolo universale della memoria.</p>
-    </div>
-  </section>
-
-  <section id="giusti">
-    <h2>I Giusti tra le Nazioni</h2>
-    <div class="card">
-      <p>I Giusti sono uomini e donne che salvarono ebrei perseguitati, spesso rischiando la propria vita. 
-      Le loro storie mostrano come la responsabilità individuale possa opporsi alla violenza e all’indifferenza.</p>
-    </div>
-  </section>
-
-  <!-- =======================
-       LETTERATURA
-       ======================= -->
 
   <section id="letteratura">
     <h2>Letteratura</h2>
     <div class="card">
+      <p>La letteratura permette di attraversare la memoria con voce umana e consapevole.</p>
       <ul>
-        <li><a href="#levi">Se questo è un uomo – Primo Levi</a></li>
-        <li><a href="#wiesel">La notte – Elie Wiesel</a></li>
-        <li><a href="#frank">Il diario di Anne Frank</a></li>
-        <li><a href="#celan">Poesie di Paul Celan</a></li>
+        <li><em>Se questo è un uomo</em> – Primo Levi</li>
+        <li><em>La notte</em> – Elie Wiesel</li>
+        <li><em>Il diario di Anne Frank</em></li>
+        <li>Poesie di Paul Celan</li>
       </ul>
+      <p>Attività: collegare un estratto a un articolo della Costituzione.</p>
     </div>
   </section>
-
-  <section id="levi">
-    <h2>Se questo è un uomo – Primo Levi</h2>
-    <div class="card">
-      <p>Testimonianza fondamentale sulla vita nel Lager. Levi analizza la disumanizzazione, la lotta per la sopravvivenza 
-      e la responsabilità della memoria.</p>
-    </div>
-  </section>
-
-  <section id="wiesel">
-    <h2>La notte – Elie Wiesel</h2>
-    <div class="card">
-      <p>Racconto autobiografico della deportazione e della perdita della famiglia. 
-      Wiesel riflette sul silenzio, sulla fede e sulla distruzione dell’umanità.</p>
-    </div>
-  </section>
-
-  <section id="frank">
-    <h2>Il diario di Anne Frank</h2>
-    <div class="card">
-      <p>Il diario di una ragazza nascosta ad Amsterdam. Una voce giovane che racconta paura, speranza e desiderio di futuro.</p>
-    </div>
-  </section>
-
-  <section id="celan">
-    <h2>Poesie di Paul Celan</h2>
-    <div class="card">
-      <p>Celan trasforma il trauma della Shoah in poesia densa, simbolica e dolorosa. 
-      La sua opera interroga la lingua dopo la catastrofe.</p>
-    </div>
-  </section>
-
-  <!-- =======================
-       TESTIMONIANZE
-       ======================= -->
 
   <section id="testimonianze">
     <h2>Testimonianze</h2>
     <div class="card">
+      <p>Le testimonianze dirette sono fondamentali per comprendere la Shoah attraverso gli occhi di chi l’ha vissuta.</p>
       <ul>
-        <li><a href="#memoriale">Interviste del Memoriale della Shoah</a></li>
-        <li><a href="#segre">Testimonianza di Liliana Segre</a></li>
-        <li><a href="#archivi">Archivi digitali (CDEC, USC Shoah Foundation)</a></li>
+        <li>Interviste e videoregistrazioni del Memoriale della Shoah</li>
+        <li>Testimonianze italiane, come quella di Liliana Segre</li>
+        <li>Archivi digitali (CDEC, USC Shoah Foundation)</li>
       </ul>
+      <p>Attività: “La domanda che avrei voluto fare”.</p>
     </div>
   </section>
-
-  <section id="memoriale">
-    <h2>Interviste del Memoriale della Shoah</h2>
-    <div class="card">
-      <p>Il Memoriale raccoglie centinaia di testimonianze video che raccontano arresti, deportazioni, ritorni e ricostruzioni. 
-      Sono materiali preziosi per comprendere la storia attraverso le voci dei sopravvissuti.</p>
-    </div>
-  </section>
-
-  <section id="segre">
-    <h2>Testimonianza di Liliana Segre</h2>
-    <div class="card">
-      <p>Deportata a 13 anni, sopravvissuta ad Auschwitz. La sua voce è oggi un riferimento etico e civile 
-      contro odio, indifferenza e razzismo.</p>
-    </div>
-  </section>
-
-  <section id="archivi">
-    <h2>Archivi digitali</h2>
-    <div class="card">
-      <p>CDEC e USC Shoah Foundation raccolgono migliaia di documenti, fotografie e testimonianze. 
-      Sono strumenti fondamentali per la ricerca e la didattica.</p>
-    </div>
-  </section>
-
-  <!-- =======================
-       EDUCAZIONE CIVICA
-       ======================= -->
 
   <section id="civica">
     <h2>Educazione Civica</h2>
     <div class="card">
+      <p>La memoria storica è un pilastro della cittadinanza democratica.</p>
       <ul>
-        <li><a href="#costituzione">Articoli della Costituzione</a></li>
-        <li><a href="#dirittinegati">Diritti negati durante la Shoah</a></li>
-        <li><a href="#propaganda">Meccanismi della propaganda</a></li>
-        <li><a href="#odio">Discorsi d’odio e responsabilità civile</a></li>
+        <li>Articoli della Costituzione (es. 3, 21, 2)</li>
+        <li>Diritti negati durante la Shoah</li>
+        <li>Meccanismi della propaganda</li>
+        <li>Discorsi d’odio e responsabilità civile</li>
       </ul>
     </div>
   </section>
 
-  <section id="costituzione">
-    <h2>Articoli della Costituzione</h2>
+  <section id="laboratori">
+    <h2>Laboratori ed Esercitazioni</h2>
     <div class="card">
-      <p>Gli articoli 2, 3 e 21 garantiscono dignità, uguaglianza e libertà. 
-      Studiare la Shoah significa capire cosa accade quando questi diritti vengono negati.</p>
+      <ul>
+        <li>Analisi critica di un brano e collegamento alla Costituzione</li>
+        <li>Mappa concettuale interattiva</li>
+        <li>Visione guidata di una testimonianza</li>
+        <li>Scrittura creativa: vignette, poesie, micro‑racconti</li>
+        <li>Compito di realtà: campagna di sensibilizzazione</li>
+      </ul>
     </div>
   </section>
 
-  <section id="dirittinegati">
-    <h2>Diritti negati durante la Shoah</h2>
-    <div class="card">
-      <p>Identità, libertà, istruzione, lavoro, proprietà, vita: ogni diritto fu progressivamente cancellato. 
-      La Shoah mostra come la negazione dei diritti possa diventare sistema.</p>
-    </div>
-  </section>
+  <footer>
+    Sito creato per percorsi scolastici sulla Giornata della Memoria – Educazione Civica
+  </footer>
 
-  <section id="propaganda">
-    <h2>Meccanismi della propaganda</h2>
-    <div class="card">
-      <p>La propaganda costruì stereotipi, paure e odio. 
-      Comprendere questi meccanismi aiuta a riconoscere manipolazioni contemporanee.</p>
-    </div>
-  </section>
+</div>
 
-  <section id="odio">
-    <h2>Discorsi d’odio e responsabilità civile</h2>
-    <div class="card">
-      <p>L’odio non nasce all’improvviso: cresce nell’indifferenza. 
-      La responsabilità civile consiste nel riconoscerlo e contrastarlo.</p>
-    </div>
-  </section>
-
-  <!-- =======================
-       LABORATORI
-       ======================= -->
-
-  <
+</body>
+</html>
